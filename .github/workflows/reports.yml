@@ -23,8 +23,8 @@ jobs:
 
             - name: Export variables
               run: | 
-                export LAT= ${{ secrets.latitud }}
-                export LON= ${{ secrets.longitud }}
+                export LAT=${{ secrets.latitud }}
+                export LON=${{ secrets.longitud }}
 
             - name: Get Result
               run:
