@@ -1,0 +1,32 @@
+name: report action
+on:
+    schedule:
+      - cron:  '*/15 * * * *'
+  
+jobs:
+    getInfo:
+        name: Get info from Sunset and sunrise times
+        runs-on: windows-latest
+
+        steps:
+            - name: Checkout del codigo
+              uses: actions/checkout@v2
+
+            - name: setup python
+              uses: actions/setup-python@v1
+              with:
+                python-version: 3.8
+
+            - name: install dep
+              run: pip install -r requirements.txt
+
+            - name: Export variables
+              run: | 
+                # export LAT= ${{ secrets.latitud }}
+                # export LON= ${{ secrets.longitud }}
+                export LAT= 111
+                export LON= 222
+
+            - name: Get Result
+              run:
+                python get_results.py --lat $LAT --lon $LON
