@@ -7,7 +7,7 @@ on : [push]
 jobs:
     getInfo:
         name: Get info from Sunset and sunrise times
-        runs-on: windows-latest
+        runs-on: ubuntu-latest
 
         steps:
             - name: Checkout
