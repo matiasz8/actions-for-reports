@@ -27,6 +27,5 @@ jobs:
                 export LON=${{ secrets.LONGITUD }}
 
             - name: Get Result
-
               run:
                 python get_results.py --lat $LAT --lon $LON

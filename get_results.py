@@ -11,13 +11,14 @@ from datetime import datetime
 def printer(lat, lon):
 
     results = get_coor_data(lat, lon)
-    click.echo(f"lat: {lat}")
-    click.echo(f"long: {lon}")
+    # click.echo(f"lat: {lat}")
+    # click.echo(f"long: {lon}")
     paste_data(results)
 
 
 def get_coor_data(lat, lon) -> Dict[str, Any]:
     try:
+        lon = -58.37723
         url = f"https://api.sunrise-sunset.org/json?lat={lat}&lng={lon}"
         data = requests.post(url)
         data = json.loads(data.text)
