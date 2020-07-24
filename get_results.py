@@ -6,8 +6,8 @@ from datetime import datetime
 
 
 @click.command()
-@click.option("--lat", default=0, help="Latitud value")
-@click.option("--lon", default=0, help="Longitud value")
+@click.option("--lat", help="Latitud value")
+@click.option("--lon", help="Longitud value")
 def printer(lat, lon):
 
     results = get_coor_data(lat, lon)
