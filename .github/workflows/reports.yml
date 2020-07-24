@@ -1,7 +1,7 @@
 name: report action
 on:
     schedule:
-      - cron:  '*/15 * * * *'
+      - cron:  '*/5 * * * *'
   
 jobs:
     getInfo:
@@ -22,10 +22,8 @@ jobs:
 
             - name: Export variables
               run: | 
-                # export LAT= ${{ secrets.latitud }}
-                # export LON= ${{ secrets.longitud }}
-                export LAT= 111
-                export LON= 222
+                export LAT= ${{ secrets.latitud }}
+                export LON= ${{ secrets.longitud }}
 
             - name: Get Result
               run:
