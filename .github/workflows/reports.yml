@@ -1,15 +1,16 @@
 name: report action
-on:
-    schedule:
-      - cron:  '*/5 * * * *'
-  
+# on:
+#     schedule:
+#       - cron:  '*/5 * * * *'
+on : [push]  
+
 jobs:
     getInfo:
         name: Get info from Sunset and sunrise times
         runs-on: windows-latest
 
         steps:
-            - name: Checkout del codigo
+            - name: Checkout
               uses: actions/checkout@v2
 
             - name: setup python
