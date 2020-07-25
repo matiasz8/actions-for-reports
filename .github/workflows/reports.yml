@@ -22,13 +22,6 @@ jobs:
             - name: install dep
               run: pip install -r requirements.txt
 
-            - name: Export variables
-              run: | 
-                export LAT=${{ secrets.LAT }}
-                export LON=${{ secrets.LON }}
-                echo $LAT
-                echo $LON
-
             - name: Get Result
               run:
-                python get_results.py --lat $LAT --lon $LON
+                python get_results.py --lat ${{ secrets.LAT }} --lon ${{ secrets.LON }}
