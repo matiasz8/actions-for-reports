@@ -27,12 +27,11 @@ def get_coor_data(lat, lon) -> Dict[str, Any]:
         print(f"Error: {e}")
 
 
-def paste_data(coord_data: Dict):
+def paste_data(coord_data: Dict, lat, lon):
     time_upd = get_time()
-    print(coord_data)
     with open("README.md", "w+") as reader:
         reader.write(f"\n## *****{time_upd}*****\n\n")
-        reader.write(f"\n\n ### Latitud: {lat}\n### Longitud: {lon}\n\n")
+        reader.write(f"\n\n\t\t### Latitud: {lat}\n\t\t### Longitud: {lon}\n\n")
         for key, val in coord_data["results"].items():
             reader.write(f" - {key} \t {val}\n")
 

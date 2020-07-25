@@ -24,8 +24,10 @@ jobs:
 
             - name: Export variables
               run: | 
-                export LAT=${{ secrets.LATITUD }}
-                export LON=${{ secrets.LONGITUD }}
+                export LAT=${{ secrets.LAT }}
+                export LON=${{ secrets.LON }}
+                echo $LAT
+                echo $LON
 
             - name: Get Result
               run:
