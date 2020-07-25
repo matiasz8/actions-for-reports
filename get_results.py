@@ -33,7 +33,7 @@ def paste_data(coord_data, lat, lon):
     print(f"Lat: {lat}")
     print(f"Lat: {lon}")
     print(coord_data)
-    with open("README.md", "w+") as reader:
+    with open("Report.md", "w+") as reader:
         reader.write(f"\n## *****{time_upd}*****\n\n")
         reader.write(f"\n\n\t\t Latitud: {lat}\n\t\t Longitud: {lon}\n\n")
         for key, val in coord_data["results"].items():
