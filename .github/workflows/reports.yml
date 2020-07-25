@@ -22,6 +22,8 @@ jobs:
             - name: install dep
               run: pip install -r requirements.txt
 
+            - run: ls
+            
             - name: Get Result
               run:
                 python get_results.py --lat ${{ secrets.LAT }} --lon ${{ secrets.LON }}
