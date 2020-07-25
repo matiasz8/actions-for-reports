@@ -1,17 +1,13 @@
 
-Last Update: 24, Jul 2020, 04:09 PM
-{
-  "results": {
-    "sunrise": "10:52:20 AM",
-    "sunset": "9:07:46 PM",
-    "solar_noon": "4:00:03 PM",
-    "day_length": "10:15:26",
-    "civil_twilight_begin": "10:25:24 AM",
-    "civil_twilight_end": "9:34:42 PM",
-    "nautical_twilight_begin": "9:54:48 AM",
-    "nautical_twilight_end": "10:05:18 PM",
-    "astronomical_twilight_begin": "9:24:47 AM",
-    "astronomical_twilight_end": "10:35:19 PM"
-  },
-  "status": "OK"
-}
+Last Update: 25, Jul 2020, 04:07 AM
+
+"sunrise": "10:51:38 AM",
+"sunset": "9:08:28 PM",
+"solar_noon": "4:00:03 PM",
+"day_length": "10:16:50",
+"civil_twilight_begin": "10:24:46 AM",
+"civil_twilight_end": "9:35:21 PM",
+"nautical_twilight_begin": "9:54:12 AM",
+"nautical_twilight_end": "10:05:54 PM",
+"astronomical_twilight_begin": "9:24:13 AM",
+"astronomical_twilight_end": "10:35:53 PM"

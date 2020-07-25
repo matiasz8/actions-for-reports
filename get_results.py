@@ -18,7 +18,7 @@ def printer(lat, lon):
 
 def get_coor_data(lat, lon) -> Dict[str, Any]:
     try:
-        lon = -58.37723
+        # lon = -58.37723
         url = f"https://api.sunrise-sunset.org/json?lat={lat}&lng={lon}"
         data = requests.post(url)
         data = json.loads(data.text)
@@ -29,10 +29,9 @@ def get_coor_data(lat, lon) -> Dict[str, Any]:
 
 
 def paste_data(coord_data: Dict):
-    dirFile = "./README.md"
     time_upd = get_time()
-    data = ["\n", time_upd, "\n", coord_data]
-    with open(dirFile, "w+") as reader:
+    data = ["\n*****", time_upd, "\n", coord_data]
+    with open("README.md", "w+") as reader:
         for line in data:
             reader.writelines(line)
 
