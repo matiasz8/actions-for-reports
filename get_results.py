@@ -13,16 +13,15 @@ def printer(lat, lon):
     results = get_coor_data(lat, lon)
     click.echo(f"lat: {lat}")
     click.echo(f"long: {lon}")
-    paste_data(results)
+    paste_data(results, lat, lon)
 
 
 def get_coor_data(lat, lon) -> Dict[str, Any]:
     try:
-        # lon = -58.37723
         url = f"https://api.sunrise-sunset.org/json?lat={lat}&lng={lon}"
         data = requests.post(url)
         data = json.loads(data.text)
-        data = json.dumps(data, indent=2)
+        # data = json.dumps(data, indent=2)
         return data
     except Exception as e:
         print(f"Error: {e}")
@@ -30,10 +29,12 @@ def get_coor_data(lat, lon) -> Dict[str, Any]:
 
 def paste_data(coord_data: Dict):
     time_upd = get_time()
-    data = ["\n*****", time_upd, "\n", coord_data]
+    print(coord_data)
     with open("README.md", "w+") as reader:
-        for line in data:
-            reader.writelines(line)
+        reader.write(f"\n## *****{time_upd}*****\n\n")
+        reader.write(f"\n\n ### Latitud: {lat}\n### Longitud: {lon}\n\n")
+        for key, val in coord_data["results"].items():
+            reader.write(f" - {key} \t {val}\n")
 
 
 def get_time():
