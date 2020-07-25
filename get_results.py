@@ -11,8 +11,8 @@ from datetime import datetime
 def printer(lat, lon):
 
     results = get_coor_data(lat, lon)
-    # click.echo(f"lat: {lat}")
-    # click.echo(f"long: {lon}")
+    click.echo(f"lat: {lat}")
+    click.echo(f"long: {lon}")
     paste_data(results)
 
 
