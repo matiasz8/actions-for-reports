@@ -2,7 +2,7 @@ import click
 from typing import Dict, Any
 import json
 import requests
-from datetime import datetime
+from datetime import timezone, datetime, timedelta
 
 
 @click.command()
@@ -33,7 +33,7 @@ def paste_data(coord_data, lat, lon):
     print(f"Lat: {lat}")
     print(f"Lat: {lon}")
     print(coord_data)
-    with open("Report.md", "w+") as reader:
+    with open("README.md", "w+") as reader:
         reader.write(f"\n## *****{time_upd}*****\n\n")
         reader.write(f"\n\n\t\t Latitud: {lat}\n\t\t Longitud: {lon}\n\n")
         for key, val in coord_data["results"].items():
@@ -41,9 +41,22 @@ def paste_data(coord_data, lat, lon):
 
 
 def get_time():
-    data = datetime.now()
-    time = "Last Update: {:%d, %b %Y, %I:%M %p}".format(data)
-    return time
+    time = datetime.now()
+    timezone = -3
+
+    d = datetime(
+        time.year,
+        time.month,
+        time.day,
+        time.hour,
+        time.minute,
+        time.second,
+        tzinfo=timezone(timedelta(hours=timezone)),
+    )
+
+    time = d.astimezone(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
+    data = f"Last update {time}"
+    return data
 
 
 if __name__ == "__main__":

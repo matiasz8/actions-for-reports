@@ -27,7 +27,24 @@ data = json.dumps(data, indent=2)
 # data = json.dumps(data)
 
 data = json.loads(data)
-print()
 
-for key, val in data["results"].items():
-    print(val, key)
+# for key, val in data["results"].items():
+#     print(val, key)
+
+
+from datetime import timezone, datetime, timedelta
+
+time = datetime.now()
+
+d = datetime(
+    time.year,
+    time.month,
+    time.day,
+    time.hour,
+    time.minute,
+    time.second,
+    tzinfo=timezone(timedelta(hours=-3)),
+)
+
+time = d.astimezone(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
+print(time)
