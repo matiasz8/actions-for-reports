@@ -22,7 +22,9 @@ jobs:
             - name: install dep
               run: pip install -r requirements.txt
 
-            - run: ls
+            - run: |
+                git config --global user.email "nahuelq.78@gmail.com"
+                git config --global user.name "matiasz8"
             
             - name: Get Result
               run:
