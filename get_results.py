@@ -34,16 +34,19 @@ def paste_data(coord_data, lat, lon):
     print(f"Lat: {lon}")
     print(coord_data)
     with open("README.md", "w+") as reader:
+        
+        reader.write(f"{get_badged()} \n\n")
         reader.write(f"\n## *****{time_upd}*****\n\n")
         reader.write(f"\n\n\t\t Latitud: {lat}\n\t\t Longitud: {lon}\n\n")
         for key, val in coord_data["results"].items():
             reader.write(f" - {key} \t {val}\n")
 
+def get_badged():
+    return ![report action](https://github.com/matiasz8/actions-for-reports/workflows/report%20action/badge.svg?branch=develop)
 
 def get_time():
     time = datetime.now()
-    timezone = -3
-
+    timezone_hs = -3
     d = datetime(
         time.year,
         time.month,
@@ -51,7 +54,7 @@ def get_time():
         time.hour,
         time.minute,
         time.second,
-        tzinfo=timezone(timedelta(hours=timezone)),
+        tzinfo=timezone(timedelta(hours=timezone_hs)),
     )
 
     time = d.astimezone(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
