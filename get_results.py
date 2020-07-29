@@ -48,7 +48,7 @@ def get_badged():
 
 def get_time():
     time = datetime.now()
-    timezone_hs = 0
+    timezone_hs = -3
     d = datetime(
         time.year,
         time.month,
