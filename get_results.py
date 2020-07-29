@@ -48,7 +48,7 @@ def get_badged():
 
 def get_time():
     time = datetime.now()
-    timezone_hs = -3
+    timezone_hs = 0
     d = datetime(
         time.year,
         time.month,
@@ -59,7 +59,7 @@ def get_time():
         tzinfo=timezone(timedelta(hours=timezone_hs)),
     )
 
-    time = d.astimezone(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
+    time = d.astimezone(timezone.utc).strftime("%d-%m-%Y %H:%M:%S")
     data = f"Last update {time}"
     return data
 
