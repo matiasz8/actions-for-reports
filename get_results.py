@@ -48,7 +48,8 @@ def get_badged():
 
 def get_time():
     time = datetime.now()
-    timezone_hs = -3
+    print(f"Show time: {time}")
+    timezone_hs = 3
     d = datetime(
         time.year,
         time.month,
