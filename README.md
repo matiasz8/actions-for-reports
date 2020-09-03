@@ -1,20 +1,20 @@
 ![report action](https://github.com/matiasz8/actions-for-reports/workflows/report%20action/badge.svg?branch=develop) 
 
 
-## *****Last update 02-09-2020 04:18:50*****
+## *****Last update 03-09-2020 03:08:53*****
 
 
 
 		 Latitud: -34.61315
 		 Longitud: -58.37723
 
- - sunrise 	 10:09:12 AM
- - sunset 	 9:36:26 PM
- - solar_noon 	 3:52:49 PM
- - day_length 	 11:27:14
- - civil_twilight_begin 	 9:43:59 AM
- - civil_twilight_end 	 10:01:39 PM
- - nautical_twilight_begin 	 9:14:47 AM
- - nautical_twilight_end 	 10:30:51 PM
- - astronomical_twilight_begin 	 8:45:36 AM
- - astronomical_twilight_end 	 11:00:01 PM
+ - sunrise 	 10:07:50 AM
+ - sunset 	 9:37:08 PM
+ - solar_noon 	 3:52:29 PM
+ - day_length 	 11:29:18
+ - civil_twilight_begin 	 9:42:39 AM
+ - civil_twilight_end 	 10:02:20 PM
+ - nautical_twilight_begin 	 9:13:27 AM
+ - nautical_twilight_end 	 10:31:31 PM
+ - astronomical_twilight_begin 	 8:44:16 AM
+ - astronomical_twilight_end 	 11:00:42 PM
