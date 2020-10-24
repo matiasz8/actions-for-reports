@@ -1,7 +1,7 @@
 ![report action](https://github.com/matiasz8/actions-for-reports/workflows/report%20action/badge.svg?branch=develop) 
 
 
-## *****Last update 24-10-2020 03:34:10*****
+## *****Last update 24-10-2020 03:44:42*****
 
 
 
